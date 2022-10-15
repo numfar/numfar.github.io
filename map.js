@@ -1,4 +1,4 @@
-fetch('./data.json')
+fetch('./data/stops.json')
     .then((response) => response.json())
     .then((stops) => {
         var routes = [];
