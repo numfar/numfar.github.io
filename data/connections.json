@@ -1,1 +1,22 @@
-[]
+[
+  {
+    "stop1":
+      {"id": 1, "name":"Kärrgruvan", "type":1, "description": "Kärrgruvan utanför Norberg","startYear": "1856-06-29", "longitude": 15.9365462,"latitude": 60.0913360 },
+    "stop2":
+      {"id": 2, "name":"Ängelsberg station", "type":1, "description": "Ängelsberg station","startYear": "1856-06-29", "longitude": 16.0098471,"latitude": 59.9585172 },
+    "route":  1
+  },
+  {
+    "stop1":
+      {"id": 3, "name":"Södertälje station", "type":1, "description": "Start på Stockholms järnväg","startYear": "1860-01-01", "longitude": 17.6271663, "latitude": 59.1964289 },
+    "stop2":
+      {"id": 4, "name":"Stockholm centralstation", "type":1, "description": "Stockholm C","startYear": "1860-01-01", "longitude": 18.0710935,"latitude": 59.3251172 },
+    "route":  2
+  },
+  {
+    "stop1":
+      {"id": 5, "name":"Göteborg C", "type":1, "description": "Västra stambanan","startYear": "1862-01-01", "longitude": 11.9670171, "latitude": 57.7072326 },
+    "stop2":
+      {"id": 6, "name":"Malmö Station", "type":1, "description": "Södra stambanan","startYear": "1864-01-01", "longitude": 13.0001566,"latitude": 55.6052931 },
+    "route":  3}
+]

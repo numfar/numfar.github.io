@@ -1,20 +1,17 @@
-fetch('./data/stops.json')
+fetch('./data/connections.json')
     .then((response) => response.json())
-    .then((stops) => {
-        var routes = [];
-        var connections = [];
-
-        var map = L.map('map').setView([stops[0].latitude, stops[0].longitude], 5);
+    .then((connections) => {
+        var map = L.map('map').setView([59.3251172, 18.0710935], 5);
         L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
             maxZoom: 19,
             attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
         }).addTo(map);
-        stops.forEach(stop => L.marker([stop.latitude, stop.longitude]).addTo(map));
+        connections.forEach(connection => {
+            L.marker([connection.stop1.latitude, connection.stop1.longitude]).addTo(map);
+            L.marker([connection.stop2.latitude, connection.stop2.longitude]).addTo(map);
+            });
+        connections.map(con => {
+            var latLng = [[con.stop1.latitude, con.stop1.longitude], [con.stop2.latitude, con.stop2.longitude]];
+            L.polyline(latLng).addTo(map);
+        });
     });
-
-/*
-insert into route (route_name) values ('Rutt3');
-insert into connection (node1,node2,route) values (5,6,3);
-insert into route (route_name) values ('Rutt4');
-insert into connection (node1,node2,route) values (7,8,4);
-*/
