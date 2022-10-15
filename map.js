@@ -11,3 +11,10 @@ fetch('./data.json')
         }).addTo(map);
         stops.forEach(stop => L.marker([stop.latitude, stop.longitude]).addTo(map));
     });
+
+/*
+insert into route (route_name) values ('Rutt3');
+insert into connection (node1,node2,route) values (5,6,3);
+insert into route (route_name) values ('Rutt4');
+insert into connection (node1,node2,route) values (7,8,4);
+*/
