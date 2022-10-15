@@ -15,17 +15,7 @@
 </head>
 <body>
     <div style="height: 400px;" id="map"></div>
-    <script>
-        var stops = JSON.parse('[{"name":"Kärrgruvan", "type":1, "description": "Kärrgruvan utanför Norberg","startYear": "1856-06-29", "longitude": 15.9365462,"latitude": 60.0913360 }]');
-        var routes = [];
-        var connections = [];
-
-        var map = L.map('map').setView([stops[0].latitude, stops[0].longitude], 5);
-        L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
-            maxZoom: 19,
-            attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
-        }).addTo(map);
-        L.marker([stops[0].latitude, stops[0].longitude]).addTo(map);
+    <script src="map.js">
     </script>
 </body>
 </html>
